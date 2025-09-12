@@ -8,8 +8,6 @@ async function bootstrap() {
     app.use(cookieParser());
     app.enableCors({
         origin: [
-            'https://talentsy.vercel.app',
-            'https://talentsy.onrender.com',
             'http://localhost:3000',
             'https://api-talentsy.onrender.com'
         ],
