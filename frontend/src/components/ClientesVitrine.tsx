@@ -39,7 +39,8 @@ export default function ClientesVitrine() {
             <div className="text-xl sm:text-2xl font-bold mb-2">Clientes</div>
 
             <div className="flex gap-4 h-[252px] pb-4">
-
+                
+                {error && <p className="text-red-400">{error}</p>}
                 {loading ? (
 
                     Array.from({ length: 3 }).map((_, i) => (
@@ -52,6 +53,7 @@ export default function ClientesVitrine() {
 
                 ) : clientes.length === 0 ? (
                     <p>Nenhum cliente encontrado.</p>
+
                 ) : (
                     clientes.map((cliente, idx) => (
 
